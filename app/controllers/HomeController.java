@@ -50,7 +50,7 @@ public class HomeController extends Controller {
         double longitude = Double.parseDouble(dynamicForm.get("longitude"));
         String start = dynamicForm.get("start");
         ObjectNode result = Json.newObject();
-        process(latitude, longitude, username, timestamp, start);
+        double totalDistance = process(latitude, longitude, username, timestamp, start);
         Logger.info("Total Distance: " + totalDistance);
         result.put("total_distance", totalDistance);
         return ok(result);
@@ -64,77 +64,62 @@ public class HomeController extends Controller {
      *
      * Total distance will be stored for every POST request. For every new request, total distance will be the previous
      * total distance plus the current displacement.
-     * @param latitude
-     * @param longitude
+     * @param currentLat
+     * @param currentLon
      * @param username
      * @param timestamp
      * @param start
      */
-    public void process(double latitude, double longitude, String username, String timestamp, String start){
-        db.withConnection(connection -> {
-            //Create table if does not exist.
-            String createSql = "CREATE TABLE IF NOT EXISTS distance_calculator (\n"
-                    + "	id integer PRIMARY KEY,\n"
-                    + "	username text NOT NULL,\n"
-                    + "	latitude real NOT NULL,\n"
-                    + "	longitude real NOT NULL,\n"
-                    + "	timestamp text NOT NULL,\n"
-                    + "	total_distance real NOT NULL\n"
-                    + ");";
-            Logger.info(createSql);
-            Statement stmt = connection.createStatement();
-            // create a new table
-            stmt.execute(createSql);
-
-            //Inserting location into database.
-            String insertSql = "INSERT INTO distance_calculator(username, latitude, longitude, timestamp, total_distance) VALUES(?,?,?,?,?)";
-            PreparedStatement pstmt = connection.prepareStatement(insertSql);
-            pstmt.setString(1, username);
-            pstmt.setDouble(2, latitude);
-            pstmt.setDouble(3, longitude);
-            pstmt.setString(4, timestamp);
-            totalDistance = 0.0;
-            //Fetch total distance since "start" for the user. Every record will also store the total distance since "start"
-            if (start!=null && start.equalsIgnoreCase("true"))
-                //If start is true, total distance will be zero.
-                pstmt.setDouble(5, 0);
-            else {
-                // Else total distance will be displacement between current co-ordinates and previous co-ordinates
-                // for the user from database plus the total distance upto the previous co-ordinates.
-                Logger.info("Calculating total distance since start for: " + username);
-                calculateTotalDistance(username, latitude, longitude);
-                pstmt.setDouble(5, totalDistance);
-            }
-            pstmt.executeUpdate();
-        });
-    }
-
-    double totalDistance = 0.0;
-
-    /**
-     * Calculates the total cumulative distance since "start" time for the user
-     * Updates the totalDistance global variable.
-     * @param username
-     * @param currentLat
-     * @param currentLon
-     */
-    public void calculateTotalDistance(String username, double currentLat, double currentLon){
-        db.withConnection(connection -> {
-            String querySql = "SELECT username, latitude, longitude, total_distance " +
+    public double process(double currentLat, double currentLon, String username, String timestamp, String start){
+        try (Connection connection = db.getConnection();){
+            String querySql = "SELECT id, username, latitude, longitude, total_distance " +
                     "FROM distance_calculator where username = ? ORDER BY timestamp DESC LIMIT 1";
             PreparedStatement pstmt = connection.prepareStatement(querySql);
             pstmt.setString(1, username);
             ResultSet rs  = pstmt.executeQuery();
-            totalDistance = 0.0;
             if(rs.next()){
                 double previousLat = rs.getDouble("latitude");
                 double previousLon = rs.getDouble("longitude");
                 double currentDistance = rs.getDouble("total_distance");
+                int id = rs.getInt("id");
                 double disp = getDisplacement(previousLat, previousLon, currentLat, currentLon);
-                totalDistance = disp + currentDistance;
+                double totalDistance = disp + currentDistance;
                 Logger.info("Total Distance: "+totalDistance);
+
+                //Inserting location into database.
+                //Fetch total distance since "start" for the user.
+                if (start!=null && start.equalsIgnoreCase("true")) {
+                    //If new measurement, i.e. start is true, then insert into the database
+                    String insertSql = "INSERT INTO distance_calculator(username, latitude, longitude, timestamp, total_distance) VALUES(?,?,?,?,?)";
+                    PreparedStatement pstmt1 = connection.prepareStatement(insertSql);
+                    pstmt1.setString(1, username);
+                    pstmt1.setDouble(2, currentLat);
+                    pstmt1.setDouble(3, currentLon);
+                    pstmt1.setString(4, timestamp);
+                    //If start is true, total distance will be zero.
+                    pstmt1.setDouble(5, 0);
+                    pstmt1.executeUpdate();
+                }
+                else {
+                    // Else total distance will be displacement between current co-ordinates and previous co-ordinates
+                    // for the user from database plus the total distance upto the previous co-ordinates.
+                    Logger.info("Calculating total distance since start for: " + username);
+
+                    String insertSql = "UPDATE distance_calculator SET latitude = ? , longitude = ?, timestamp = ?, total_distance = ? WHERE id = ?";
+                    PreparedStatement pstmt2 = connection.prepareStatement(insertSql);
+                    pstmt2.setDouble(1, currentLat);
+                    pstmt2.setDouble(2, currentLon);
+                    pstmt2.setString(3, timestamp);
+                    pstmt2.setDouble(4, totalDistance);
+                    pstmt2.setInt(5, id);
+                    pstmt2.executeUpdate();
+                }
+                return totalDistance;
             }
-        });
+        }catch (Exception e){
+            Logger.error("Error while processing", e);
+        }
+        return 0.0;
     }
 
     /**
