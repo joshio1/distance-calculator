@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Omkar/NCSU/SOC/Project 1/play-java-seed/conf/routes
-// @DATE:Tue Aug 29 16:15:40 EDT 2017
+// @SOURCE:C:/Omkar/NCSU/SOC/Project 1/distance-calculator/conf/routes
+// @DATE:Thu Aug 31 02:25:27 EDT 2017
 
 
 package router {

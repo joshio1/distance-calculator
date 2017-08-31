@@ -4,7 +4,7 @@
 		module="play-java-seed$sources_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170829174201"
+		publication="20170831004934"
 	/>
 	<configurations>
 		<conf name="universal" visibility="public" description=""/>

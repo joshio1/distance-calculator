@@ -1,4 +1,4 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\Omkar\NCSU\SOC\Project 1\play-java-seed\conf\application.conf,C:\Omkar\NCSU\SOC\Project 1\play-java-seed\target\scala-2.12\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\Omkar\NCSU\SOC\Project 1\play-java-seed\conf\logback.xml,C:\Omkar\NCSU\SOC\Project 1\play-java-seed\target\scala-2.12\classes\logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(C:\Omkar\NCSU\SOC\Project 1\play-java-seed\conf\routes,C:\Omkar\NCSU\SOC\Project 1\play-java-seed\target\scala-2.12\classes\routes)[0m
+[debug] Copy resource mappings: 
+[debug] 	(C:\Omkar\NCSU\SOC\Project 1\distance-calculator\conf\application.conf,C:\Omkar\NCSU\SOC\Project 1\distance-calculator\target\scala-2.12\classes\application.conf)
+[debug] 	(C:\Omkar\NCSU\SOC\Project 1\distance-calculator\conf\logback.xml,C:\Omkar\NCSU\SOC\Project 1\distance-calculator\target\scala-2.12\classes\logback.xml)
+[debug] 	(C:\Omkar\NCSU\SOC\Project 1\distance-calculator\conf\routes,C:\Omkar\NCSU\SOC\Project 1\distance-calculator\target\scala-2.12\classes\routes)
