@@ -1,0 +1,4 @@
+;reload; set org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo C:/Users/Omkar/AppData/Local/Temp/sbt-structure.xml
+run
+all {file:/C:/Omkar/NCSU/SOC/Project%201/play-java-seed/}root/products {file:/C:/Omkar/NCSU/SOC/Project%201/play-java-seed/}root/test:products
+run
