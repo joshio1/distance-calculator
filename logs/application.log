@@ -1,24 +1,19 @@
-2017-08-31 02:26:00,825 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2017-08-31 02:26:01,180 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:sqlite:public/databases/dc_db.db
-2017-08-31 02:26:02,459 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-6 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2017-08-31 02:26:03,276 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-08-31 05:29:24,471 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-08-31 05:29:24,643 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:sqlite:public/databases/distance_calculator.db
+2017-08-31 05:29:25,250 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-4 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-08-31 05:29:25,589 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2017-08-31 02:26:03,281 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev)
-2017-08-31 02:26:04,776 [INFO] from application in application-akka.actor.default-dispatcher-2 - Username is: onjoshi
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-2 - Time is: 1504160723
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-2 - Latitude is: 35.777429
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-2 - Longitude is: -78.6786863
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-2 - Start is: true
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-4 - Username is: onjoshi
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-4 - Time is: 1504160723
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-4 - Latitude is: 35.777429
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-4 - Longitude is: -78.6786863
-2017-08-31 02:26:04,777 [INFO] from application in application-akka.actor.default-dispatcher-4 - Start is: true
-2017-08-31 02:26:04,784 [INFO] from application in application-akka.actor.default-dispatcher-2 - CREATE TABLE IF NOT EXISTS distance_calculator (
+2017-08-31 05:29:25,599 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-08-31 05:29:26,370 [INFO] from application in application-akka.actor.default-dispatcher-7 - Username is: Omkar
+2017-08-31 05:29:26,370 [INFO] from application in application-akka.actor.default-dispatcher-7 - Time is: 1501745843691
+2017-08-31 05:29:26,370 [INFO] from application in application-akka.actor.default-dispatcher-7 - Latitude is: 35.779436
+2017-08-31 05:29:26,370 [INFO] from application in application-akka.actor.default-dispatcher-7 - Longitude is: -78.676036
+2017-08-31 05:29:26,370 [INFO] from application in application-akka.actor.default-dispatcher-7 - Start is: true
+2017-08-31 05:29:26,375 [INFO] from application in application-akka.actor.default-dispatcher-7 - CREATE TABLE IF NOT EXISTS distance_calculator (
 	id integer PRIMARY KEY,
 	username text NOT NULL,
 	latitude real NOT NULL,
@@ -26,599 +21,86 @@
 	timestamp text NOT NULL,
 	total_distance real NOT NULL
 );
-2017-08-31 02:26:04,787 [INFO] from application in application-akka.actor.default-dispatcher-4 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:26:04,922 [INFO] from application in application-akka.actor.default-dispatcher-4 - Total Distance after insert: 0.0
-2017-08-31 02:26:05,049 [INFO] from application in application-akka.actor.default-dispatcher-2 - Total Distance after insert: 0.0
-2017-08-31 02:27:17,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:27:17,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160834
-2017-08-31 02:27:17,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.777429
-2017-08-31 02:27:17,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786863
-2017-08-31 02:27:17,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: true
-2017-08-31 02:27:17,849 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:27:17,886 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 0.0
-2017-08-31 02:27:20,784 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:27:20,785 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160834
-2017-08-31 02:27:20,785 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.777429
-2017-08-31 02:27:20,785 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786863
-2017-08-31 02:27:20,785 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: true
-2017-08-31 02:27:20,787 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:27:20,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 0.0
-2017-08-31 02:27:22,816 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:27:22,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160839
-2017-08-31 02:27:22,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.777429
-2017-08-31 02:27:22,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786863
-2017-08-31 02:27:22,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:27:22,820 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:27:22,820 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:27:22,837 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:27:22,837 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.0
-2017-08-31 02:27:22,837 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 0.0
-2017-08-31 02:27:22,849 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 0.0
-2017-08-31 02:27:27,838 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:27:27,838 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160844
-2017-08-31 02:27:27,838 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.777429
-2017-08-31 02:27:27,838 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786863
-2017-08-31 02:27:27,838 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:27:27,841 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:27:27,843 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:27:27,846 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:27:27,846 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.0
-2017-08-31 02:27:27,846 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 0.0
-2017-08-31 02:27:27,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 0.0
-2017-08-31 02:28:07,781 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:07,781 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160884
-2017-08-31 02:28:07,781 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:07,781 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:07,781 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:07,787 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:07,787 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:07,788 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 9.061788868978441E-4
-2017-08-31 02:28:07,788 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:07,788 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:07,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:12,750 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:12,750 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160889
-2017-08-31 02:28:12,750 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:12,750 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:12,750 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:12,752 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:12,753 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:12,753 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:12,753 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:12,753 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:12,777 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:17,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:17,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160894
-2017-08-31 02:28:17,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:17,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:17,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:17,814 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:17,814 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:17,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:17,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:17,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:17,855 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:22,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:22,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160899
-2017-08-31 02:28:22,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:22,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:22,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:22,832 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:22,833 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:22,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:22,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:22,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:22,886 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:27,847 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:27,847 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160904
-2017-08-31 02:28:27,847 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:27,847 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:27,847 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:27,855 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:27,856 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:27,857 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:27,857 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:27,857 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:27,880 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:32,860 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:32,861 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160909
-2017-08-31 02:28:32,861 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:32,861 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:32,861 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:32,862 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:32,862 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:32,863 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:32,863 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:32,863 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:32,884 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:37,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:37,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160914
-2017-08-31 02:28:37,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:37,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:37,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:37,945 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:37,946 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:37,947 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:37,947 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:37,948 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:37,969 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:43,206 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:43,206 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160917
-2017-08-31 02:28:43,206 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:43,206 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:43,206 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:43,210 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:43,210 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:43,211 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:43,211 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:43,211 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:43,234 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:47,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:47,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160922
-2017-08-31 02:28:47,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:47,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:47,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:47,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:47,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:47,918 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:47,919 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:47,919 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:47,934 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:52,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:52,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160927
-2017-08-31 02:28:52,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:52,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:52,827 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:52,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:52,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:52,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:52,832 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:52,832 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:52,862 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:28:57,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:28:57,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160932
-2017-08-31 02:28:57,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:28:57,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:28:57,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:28:57,857 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:28:57,858 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:28:57,858 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:28:57,858 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:28:57,858 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:28:57,874 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:02,978 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:02,978 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160937
-2017-08-31 02:29:02,978 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:02,978 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:02,978 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:02,984 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:02,986 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:02,986 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:02,987 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:02,987 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:03,016 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:07,883 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:07,883 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160942
-2017-08-31 02:29:07,883 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:07,883 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:07,883 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:07,886 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:07,886 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:07,887 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:07,887 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:07,887 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:07,908 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:12,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:12,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160947
-2017-08-31 02:29:12,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:12,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:12,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:12,898 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:12,898 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:12,900 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:12,900 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:12,900 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:12,918 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:17,813 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:17,813 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160952
-2017-08-31 02:29:17,813 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:17,813 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:17,813 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:17,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:17,816 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:17,816 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:17,816 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:17,816 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:17,829 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:22,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:22,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160957
-2017-08-31 02:29:22,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:22,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:22,810 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:22,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:22,811 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:22,812 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:22,812 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:22,812 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:22,825 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:27,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:27,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160962
-2017-08-31 02:29:27,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:27,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:27,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:27,853 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:27,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:27,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:27,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:27,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:27,872 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:29:32,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:29:32,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504160967
-2017-08-31 02:29:32,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:29:32,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:29:32,864 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:29:32,865 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:29:32,866 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:29:32,867 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:29:32,867 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:29:32,867 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:29:32,884 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:31:57,803 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:31:57,803 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161112
-2017-08-31 02:31:57,803 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:31:57,803 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:31:57,803 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:31:57,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:31:57,818 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:31:57,818 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:31:57,819 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:31:57,819 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:31:57,839 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:02,885 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:02,885 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161117
-2017-08-31 02:32:02,885 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:02,885 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:02,885 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:02,888 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:02,889 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:02,890 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:02,890 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:02,890 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:02,909 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:07,797 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:07,797 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161122
-2017-08-31 02:32:07,797 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:07,797 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:07,797 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:07,798 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:07,799 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:07,800 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:07,800 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:07,800 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:07,817 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:12,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:12,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161127
-2017-08-31 02:32:12,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:12,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:12,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:12,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:12,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:12,918 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:12,918 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:12,918 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:12,934 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:17,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:17,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161132
-2017-08-31 02:32:17,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:17,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:17,830 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:17,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:17,832 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:17,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:17,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:17,834 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:17,859 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:22,850 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:22,850 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161137
-2017-08-31 02:32:22,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:22,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:22,851 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:22,853 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:22,853 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:22,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:22,854 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:22,855 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:22,876 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:32:27,868 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:32:27,868 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161142
-2017-08-31 02:32:27,868 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:32:27,868 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:32:27,868 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:32:27,875 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:32:27,875 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:32:27,876 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:32:27,876 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:32:27,876 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:32:27,896 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:33:02,794 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:33:02,794 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161177
-2017-08-31 02:33:02,794 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:33:02,794 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:33:02,794 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:33:02,814 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:33:02,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:33:02,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:33:02,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:33:02,815 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:33:02,836 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:33:07,912 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:33:07,912 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161182
-2017-08-31 02:33:07,912 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:33:07,912 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:33:07,912 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:33:07,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:33:07,916 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:33:07,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:33:07,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:33:07,917 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:33:07,934 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:33:12,924 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:33:12,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161187
-2017-08-31 02:33:12,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:33:12,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:33:12,925 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:33:12,930 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:33:12,930 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:33:12,931 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:33:12,931 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:33:12,931 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:33:12,961 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
-2017-08-31 02:33:17,844 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: onjoshi
-2017-08-31 02:33:17,844 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1504161192
-2017-08-31 02:33:17,844 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.7774385
-2017-08-31 02:33:17,844 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.6786752
-2017-08-31 02:33:17,844 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
-2017-08-31 02:33:17,845 [INFO] from application in application-akka.actor.default-dispatcher-6 - CREATE TABLE IF NOT EXISTS distance_calculator (
-	id integer PRIMARY KEY,
-	username text NOT NULL,
-	latitude real NOT NULL,
-	longitude real NOT NULL,
-	timestamp text NOT NULL,
-	total_distance real NOT NULL
-);
-2017-08-31 02:33:17,848 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start not found!
-2017-08-31 02:33:17,850 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
-2017-08-31 02:33:17,850 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 9.061788868978441E-4
-2017-08-31 02:33:17,850 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance Before Insert: 9.061788868978441E-4
-2017-08-31 02:33:17,915 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance after insert: 9.061788868978441E-4
+2017-08-31 05:29:26,411 [INFO] from application in application-akka.actor.default-dispatcher-7 - Total Distance: 0.0
+2017-08-31 05:30:16,800 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-08-31 05:30:17,023 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-08-31 05:30:17,025 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:sqlite:public/databases/distance_calculator.db
+2017-08-31 05:30:17,095 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-4 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-08-31 05:30:17,174 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2017-08-31 05:30:17,174 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-08-31 05:30:17,207 [INFO] from application in application-akka.actor.default-dispatcher-9 - Username is: Omkar
+2017-08-31 05:30:17,207 [INFO] from application in application-akka.actor.default-dispatcher-9 - Time is: 1501745843691
+2017-08-31 05:30:17,207 [INFO] from application in application-akka.actor.default-dispatcher-9 - Latitude is: 35.779436
+2017-08-31 05:30:17,207 [INFO] from application in application-akka.actor.default-dispatcher-9 - Longitude is: -78.676036
+2017-08-31 05:30:17,207 [INFO] from application in application-akka.actor.default-dispatcher-9 - Start is: true
+2017-08-31 05:30:17,216 [INFO] from application in application-akka.actor.default-dispatcher-9 - Displacement: 0.0
+2017-08-31 05:30:17,216 [INFO] from application in application-akka.actor.default-dispatcher-9 - Total Distance: 0.0
+2017-08-31 05:30:17,234 [INFO] from application in application-akka.actor.default-dispatcher-9 - Total Distance: 0.0
+2017-08-31 05:30:29,565 [INFO] from application in application-akka.actor.default-dispatcher-4 - Username is: Omkar
+2017-08-31 05:30:29,565 [INFO] from application in application-akka.actor.default-dispatcher-4 - Time is: 1501745843691
+2017-08-31 05:30:29,565 [INFO] from application in application-akka.actor.default-dispatcher-4 - Latitude is: 35.779436
+2017-08-31 05:30:29,565 [INFO] from application in application-akka.actor.default-dispatcher-4 - Longitude is: -78.676036
+2017-08-31 05:30:29,565 [INFO] from application in application-akka.actor.default-dispatcher-4 - Start is: true
+2017-08-31 05:30:29,573 [INFO] from application in application-akka.actor.default-dispatcher-4 - Displacement: 0.0
+2017-08-31 05:30:29,573 [INFO] from application in application-akka.actor.default-dispatcher-4 - Total Distance: 0.0
+2017-08-31 05:30:29,573 [INFO] from application in application-akka.actor.default-dispatcher-4 - Total Distance: 0.0
+2017-08-31 05:30:54,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: Omkar
+2017-08-31 05:30:54,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1501745843692
+2017-08-31 05:30:54,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.779436
+2017-08-31 05:30:54,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.676036
+2017-08-31 05:30:54,831 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: true
+2017-08-31 05:30:54,846 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.0
+2017-08-31 05:30:54,846 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.0
+2017-08-31 05:30:54,856 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.0
+2017-08-31 05:32:06,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Username is: Test
+2017-08-31 05:32:06,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Time is: 1501745843692
+2017-08-31 05:32:06,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Latitude is: 35.771323
+2017-08-31 05:32:06,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Longitude is: -78.689179
+2017-08-31 05:32:06,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Start is: true
+2017-08-31 05:32:06,466 [INFO] from application in application-akka.actor.default-dispatcher-3 - Total Distance: 0.0
+2017-08-31 05:32:44,847 [INFO] from application in application-akka.actor.default-dispatcher-3 - Username is: Test
+2017-08-31 05:32:44,847 [INFO] from application in application-akka.actor.default-dispatcher-3 - Time is: 1501745843693
+2017-08-31 05:32:44,848 [INFO] from application in application-akka.actor.default-dispatcher-3 - Latitude is: 35.783927
+2017-08-31 05:32:44,848 [INFO] from application in application-akka.actor.default-dispatcher-3 - Longitude is: -78.670725
+2017-08-31 05:32:44,848 [INFO] from application in application-akka.actor.default-dispatcher-3 - Start is: false
+2017-08-31 05:32:44,851 [INFO] from application in application-akka.actor.default-dispatcher-3 - Total Distance: 0.0
+2017-08-31 05:37:29,500 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-08-31 05:37:29,724 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-08-31 05:37:29,725 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:sqlite:public/databases/distance_calculator.db
+2017-08-31 05:37:29,773 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-3 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-08-31 05:37:29,854 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2017-08-31 05:37:29,854 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-08-31 05:37:29,906 [INFO] from application in application-akka.actor.default-dispatcher-9 - Username is: Test
+2017-08-31 05:37:29,906 [INFO] from application in application-akka.actor.default-dispatcher-9 - Time is: 1501745843693
+2017-08-31 05:37:29,906 [INFO] from application in application-akka.actor.default-dispatcher-9 - Latitude is: 35.783927
+2017-08-31 05:37:29,906 [INFO] from application in application-akka.actor.default-dispatcher-9 - Longitude is: -78.670725
+2017-08-31 05:37:29,906 [INFO] from application in application-akka.actor.default-dispatcher-9 - Start is: true
+2017-08-31 05:37:29,924 [INFO] from application in application-akka.actor.default-dispatcher-9 - Total Distance: 0.0
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Username is: Test
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Time is: 1501745843693
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Latitude is: 35.783912
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Longitude is: -78.670235
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Start is: false
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Displacement: 0.027482918038404677
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Total Distance: 0.027482918038404677
+2017-08-31 05:37:54,746 [INFO] from application in application-akka.actor.default-dispatcher-7 - Calculating total distance since start for: Test
+2017-08-31 05:37:54,762 [INFO] from application in application-akka.actor.default-dispatcher-7 - Total Distance: 0.027482918038404677
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Username is: Test
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Time is: 1501745843693
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Latitude is: 35.783927
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Longitude is: -78.670725
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Start is: false
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Displacement: 0.027482918038404677
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.054965836076809355
+2017-08-31 05:38:45,767 [INFO] from application in application-akka.actor.default-dispatcher-6 - Calculating total distance since start for: Test
+2017-08-31 05:38:45,782 [INFO] from application in application-akka.actor.default-dispatcher-6 - Total Distance: 0.054965836076809355

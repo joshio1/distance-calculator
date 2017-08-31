@@ -72,20 +72,6 @@ public class HomeController extends Controller {
      */
     public double process(double currentLat, double currentLon, String username, String timestamp, String start){
         try (Connection connection = db.getConnection();){
-            String querySql = "SELECT id, username, latitude, longitude, total_distance " +
-                    "FROM distance_calculator where username = ? ORDER BY timestamp DESC LIMIT 1";
-            PreparedStatement pstmt = connection.prepareStatement(querySql);
-            pstmt.setString(1, username);
-            ResultSet rs  = pstmt.executeQuery();
-            if(rs.next()){
-                double previousLat = rs.getDouble("latitude");
-                double previousLon = rs.getDouble("longitude");
-                double currentDistance = rs.getDouble("total_distance");
-                int id = rs.getInt("id");
-                double disp = getDisplacement(previousLat, previousLon, currentLat, currentLon);
-                double totalDistance = disp + currentDistance;
-                Logger.info("Total Distance: "+totalDistance);
-
                 //Inserting location into database.
                 //Fetch total distance since "start" for the user.
                 if (start!=null && start.equalsIgnoreCase("true")) {
@@ -101,6 +87,19 @@ public class HomeController extends Controller {
                     pstmt1.executeUpdate();
                 }
                 else {
+                    String querySql = "SELECT id, username, latitude, longitude, total_distance " +
+                            "FROM distance_calculator where username = ? ORDER BY timestamp DESC LIMIT 1";
+                    PreparedStatement pstmt = connection.prepareStatement(querySql);
+                    pstmt.setString(1, username);
+                    ResultSet rs  = pstmt.executeQuery();
+                    if(rs.next()){
+                        double previousLat = rs.getDouble("latitude");
+                        double previousLon = rs.getDouble("longitude");
+                        double currentDistance = rs.getDouble("total_distance");
+                        int id = rs.getInt("id");
+                        double disp = getDisplacement(previousLat, previousLon, currentLat, currentLon);
+                        double totalDistance = disp + currentDistance;
+                        Logger.info("Total Distance: "+totalDistance);
                     // Else total distance will be displacement between current co-ordinates and previous co-ordinates
                     // for the user from database plus the total distance upto the previous co-ordinates.
                     Logger.info("Calculating total distance since start for: " + username);
@@ -113,8 +112,8 @@ public class HomeController extends Controller {
                     pstmt2.setDouble(4, totalDistance);
                     pstmt2.setInt(5, id);
                     pstmt2.executeUpdate();
+                    return totalDistance;
                 }
-                return totalDistance;
             }
         }catch (Exception e){
             Logger.error("Error while processing", e);
